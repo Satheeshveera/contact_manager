@@ -31,16 +31,16 @@ class Addcontact extends React.Component{
         }
     render(){
         return(
-            <div className="ui main card">
-                <h2>Add contact</h2>
+            <div className="ui main">
+                <h2>Add contact <a href="/" className="ui button blue" style={{float:"right"}}  >Go Back</a></h2>
                 <form className="ui form" onSubmit={this.addcontact}>
                     <div className="field">
                         <label>Name</label>
                         <input type="text" name="name" placeholder="Enter name" value={this.state.name} onChange={(e)=>this.setState({ name:e.target.value})}/>
                     </div>
                     <div className="field">
-                        <label>Number</label>
-                        <input type="text" name="number" placeholder="Enter number" max={10} value={this.state.number} onChange={(e)=>this.setState({ number:e.target.value})}/>
+                        <label>Number/E-mail</label>
+                        <input type="text" name="number" placeholder="Enter number/email"   value={this.state.number} onChange={(e)=>this.setState({ number:e.target.value})}/>
                     </div>
                      <button className="ui button blue">Add</button> 
                 </form>
